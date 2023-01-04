@@ -31,22 +31,26 @@ import {
 const useStyles = createStyles((theme) => ({
   wrapper: {
     backgroundColor: "transparent",
+    margin: "0 auto",
+    [theme.fn.largerThan("md")]: {
+      width: "90vw",
+    },
     [theme.fn.largerThan("lg")]: {
-      width: "60vw",
-      margin: "0 auto",
+      width: "70vw",
     },
   },
 
   link: {
     display: "flex",
     alignItems: "center",
-    height: "100%",
+    height: "60%",
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
     textDecoration: "none",
     color: theme.colors.gray[9],
     fontWeight: 700,
     fontSize: theme.fontSizes.md,
+    borderRadius: "10px",
 
     [theme.fn.smallerThan("sm")]: {
       height: 42,
@@ -163,7 +167,7 @@ function Navigation() {
   ));
 
   return (
-    <Box pb={80}>
+    <Box pb={80} pt={10}>
       <Header
         height={60}
         px="md"

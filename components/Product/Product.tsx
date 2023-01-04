@@ -24,7 +24,8 @@ const useStyles = createStyles((theme) => ({
     textAlign: "center",
     fontSize: 28,
     color: theme.colors.gray[8],
-    marginBottom: theme.spacing.xl * 2,
+    marginBottom: theme.spacing.lg * 2,
+    marginTop: theme.spacing.md,
   },
 
   card: {

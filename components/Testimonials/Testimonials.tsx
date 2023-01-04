@@ -21,7 +21,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   card: {
-    height: 440,
+    height: 400,
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -125,7 +125,6 @@ function Testimonials() {
       loop
       className={classes.wrapper}
       mx="auto"
-      my="xl"
       slideSize="50%"
       breakpoints={[{ maxWidth: "sm", slideSize: "100%", slideGap: 2 }]}
       slideGap="xl"
@@ -139,6 +138,13 @@ function Testimonials() {
           "&[data-active]": {
             width: 40,
           },
+        },
+        control: {
+          width: 50,
+          aspectRatio: "1",
+          backgroundColor: "#ffffff",
+          color: "black",
+          marginInline: "-2rem",
         },
       }}
     >

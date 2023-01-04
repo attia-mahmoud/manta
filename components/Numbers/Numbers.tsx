@@ -9,13 +9,10 @@ import {
   Box,
 } from "@mantine/core";
 import Image from "next/image";
-import { IconCheck } from "@tabler/icons";
 import image from "../../public/devices.svg";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
-    // backgroundImage: `url(${bg.src})`,
-    // height: bg.height,
     marginBottom: theme.spacing.xl * 2,
     [theme.fn.smallerThan("sm")]: {
       marginBottom: theme.spacing.xl * 5,
@@ -26,16 +23,14 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     padding: 0,
-    [theme.fn.largerThan("md")]: {
-      paddingTop: theme.spacing.xl,
-      paddingBottom: theme.spacing.xl,
-      width: "60vw",
-    },
+    paddingBlock: theme.spacing.xl,
+    width: "60vw",
     [theme.fn.smallerThan("sm")]: {
+      width: "100%",
       flexDirection: "column",
       justifyContent: "center",
-      gap: "3rem",
       alignItems: "center",
+      gap: "3rem",
     },
   },
 
@@ -75,17 +70,18 @@ const useStyles = createStyles((theme) => ({
 
   image: {
     flex: 1,
-    height: "22rem",
-
+    height: "16rem",
+    marginBlock: "auto",
     [theme.fn.smallerThan("md")]: {
-      width: "20rem",
+      height: "auto",
+      width: "15rem",
     },
   },
 
   underline: {
     position: "relative",
     textDecoration: "underline",
-    color: theme.colors.red[4],
+    color: theme.colors.blue[6],
   },
 
   cardNumber: {
@@ -136,7 +132,7 @@ function Numbers() {
               Consequuntur.
             </Text>
 
-            <SimpleGrid cols={2} spacing={0} verticalSpacing="xl" my="xl">
+            <SimpleGrid cols={2} spacing={20} verticalSpacing="xl" my="xl">
               {numbers}
             </SimpleGrid>
           </div>

@@ -27,9 +27,8 @@ const useStyles = createStyles((theme) => ({
     justifyContent: "space-between",
     padding: 0,
     [theme.fn.largerThan("md")]: {
-      paddingTop: theme.spacing.xl,
-      paddingBottom: theme.spacing.xl,
-      width: "60vw",
+      paddingBlock: theme.spacing.xl,
+      maxWidth: "80vw",
     },
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column",
@@ -41,7 +40,7 @@ const useStyles = createStyles((theme) => ({
 
   content: {
     maxWidth: 480,
-    marginRight: theme.spacing.xl * 3,
+    marginRight: theme.spacing.xl * 7,
 
     [theme.fn.smallerThan("sm")]: {
       width: "100%",
@@ -55,7 +54,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    color: theme.colorScheme === "dark" ? theme.white : theme.black,
+    color: theme.white,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontSize: 44,
     lineHeight: 1.2,
@@ -64,6 +63,7 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("sm")]: {
       fontSize: 42,
       marginBottom: theme.spacing.xl,
+      marginTop: -theme.spacing.xl * 2,
     },
   },
 
@@ -75,8 +75,8 @@ const useStyles = createStyles((theme) => ({
 
   image: {
     flex: 1,
-    height: "25rem",
-
+    height: "18rem",
+    marginBlock: "auto",
     [theme.fn.smallerThan("md")]: {
       width: "20rem",
     },
@@ -85,7 +85,7 @@ const useStyles = createStyles((theme) => ({
   underline: {
     position: "relative",
     textDecoration: "underline",
-    color: theme.colors.blue[8],
+    color: theme.colors.pink[3],
   },
 }));
 

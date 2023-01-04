@@ -13,7 +13,8 @@ import image from "../../public/mobile.svg";
 const useStyles = createStyles((theme) => ({
   wrapper: {
     backgroundColor: "#fef2f2",
-    margin: "auto",
+    marginInline: "auto",
+    marginBottom: theme.spacing.xl * 3,
     paddingInline: 32,
     paddingBlock: 48,
     width: "90vw",
